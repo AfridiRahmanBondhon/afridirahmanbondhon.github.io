@@ -10,8 +10,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/afridirahmanbondhon.github.io' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/afridirahmanbondhon.github.io/' : '',
   trailingSlash: true,
 };
 
