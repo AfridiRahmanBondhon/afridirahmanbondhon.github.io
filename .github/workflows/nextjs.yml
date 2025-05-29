@@ -37,23 +37,19 @@ jobs:
       - name: Build with Next.js
         run: npm run build
       
-      - name: Debug - Check all directories
+      - name: Debug - Check output files
         run: |
-          echo "=== Root directory ==="
-          ls -la
-          echo "=== Looking for any 'out' directories ==="
-          find . -name "*out*" -type d 2>/dev/null || echo "No out directories found"
-          echo "=== Contents of .next directory ==="
-          ls -la .next/ 2>/dev/null || echo "No .next directory"
-          echo "=== Looking for static files ==="
-          find . -name "*.html" | head -10
-          echo "=== All directories ==="
-          find . -maxdepth 2 -type d
+          echo "=== Checking for index.html ==="
+          find . -name "index.html" -type f
+          echo "=== Contents of out directory ==="
+          ls -la out/ 2>/dev/null || echo "No out directory"
+          echo "=== All HTML files ==="
+          find . -name "*.html" -type f
       
-      - name: Upload artifact (try current directory)
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: ./out
 
   deploy:
     environment:
