@@ -41,19 +41,25 @@ jobs:
         run: |
           echo "=== Creating deployment directory ==="
           mkdir -p deploy
+          mkdir -p deploy/_next
           
           echo "=== Copying HTML files ==="
           cp .next/server/app/index.html deploy/
           cp .next/server/app/_not-found.html deploy/404.html
           
           echo "=== Copying static assets ==="
-          cp -r .next/static deploy/_next/static
+          cp -r .next/static deploy/_next/
           
           echo "=== Copying public assets ==="
-          cp -r public/* deploy/ 2>/dev/null || echo "No public files to copy"
+          if [ -d "public" ]; then
+            cp -r public/* deploy/ 2>/dev/null || echo "No public files to copy"
+          fi
           
           echo "=== Final deployment structure ==="
           find deploy -type f | head -20
+          
+          echo "=== Checking if index.html exists ==="
+          ls -la deploy/index.html || echo "index.html not found!"
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
