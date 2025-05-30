@@ -4,9 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Afridi Rahman Bondhon - Portfolio</title>
-    <meta http-equiv="refresh" content="0;url=./out/index.html">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .loading {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <p>Redirecting to portfolio...</p>
+    <div class="loading">
+        <h1>Loading Portfolio...</h1>
+        <p>If this page doesn't redirect automatically, please wait a moment...</p>
+    </div>
+    
+    <script>
+        // Try different possible locations for the portfolio
+        const possiblePaths = [
+            './out/index.html',
+            './app/page.html',
+            './index.html',
+            './page.html'
+        ];
+        
+        function tryRedirect(index = 0) {
+            if (index >= possiblePaths.length) {
+                document.querySelector('.loading h1').textContent = 'Portfolio Loading...';
+                document.querySelector('.loading p').innerHTML = 'Please check back in a few minutes as the site is being deployed.';
+                return;
+            }
+            
+            fetch(possiblePaths[index])
+                .then(response => {
+                    if (response.ok) {
+                        window.location.href = possiblePaths[index];
+                    } else {
+                        tryRedirect(index + 1);
+                    }
+                })
+                .catch(() => {
+                    tryRedirect(index + 1);
+                });
+        }
+        
+        // Start trying redirects after a short delay
+        setTimeout(() => tryRedirect(), 1000);
+    </script>
 </body>
 </html>
