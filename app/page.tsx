@@ -1,7 +1,7 @@
+import { Button } from "@/components/ui/button"
+import { BookOpen, ExternalLink, FileText, Github, Linkedin, Mail } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { Github, Linkedin, Mail, FileText, ExternalLink, BookOpen } from "lucide-react"
-import { Button } from "@/components/ui/button"
 
 export default function Home() {
   return (
@@ -881,10 +881,27 @@ export default function Home() {
               </div>
 
               <div className="border rounded-lg p-6 hover:shadow-md transition-shadow">
-                <h3 className="text-xl font-semibold">Journal Reviewer</h3>
+                <h3 className="text-xl font-semibold">
+                  Problem Setter, Contest Volunteer and Judge at National High School Programming Contest (2025)
+                </h3>
                 <p className="text-muted-foreground mt-2">
-                  Reviewed 1 paper for the journal PLOS One since January 2025 and 1 paper (JIPD-6162) for the Journal
-                  of Infrastructure, Policy and Development in 2024.
+                  Contributed as a problem setter, contest volunteer, and judge for the National High School Programming
+                  Contest (NHSPC) in 2025.
+                </p>
+              </div>
+
+              <div className="border rounded-lg p-6 hover:shadow-md transition-shadow">
+                <h3 className="text-xl font-semibold">Journal Reviewer (PLOS One)</h3>
+                <p className="text-muted-foreground mt-2">
+                  Reviewed 1 paper for the journal PLOS One since January 2025. [Certificate]
+                </p>
+              </div>
+
+              <div className="border rounded-lg p-6 hover:shadow-md transition-shadow">
+                <h3 className="text-xl font-semibold">Journal Reviewer (JIPD)</h3>
+                <p className="text-muted-foreground mt-2">
+                  Reviewed 1 paper (JIPD-6162) for the Journal of Infrastructure, Policy and Development in 2024.
+                  [Certificate]
                 </p>
               </div>
 
@@ -906,10 +923,18 @@ export default function Home() {
               </div>
 
               <div className="border rounded-lg p-6 hover:shadow-md transition-shadow">
+                <h3 className="text-xl font-semibold">Owner, Video Editor, and Content Manager of YouTube Channel</h3>
+                <p className="text-muted-foreground mt-2">
+                  Managed and created content for the YouTube channel "LLMLearnLAWwithMou", handling video editing and
+                  content strategy.
+                </p>
+              </div>
+
+              <div className="border rounded-lg p-6 hover:shadow-md transition-shadow">
                 <h3 className="text-xl font-semibold">Sports Achievements</h3>
                 <p className="text-muted-foreground mt-2">
                   Badminton semi-finalist of IIT Indoor Tournament 2024, Best Goal Keeper of Bappi Premier League
-                  (October 2021), Two times Champion of Mollapara Badminton Tournament (2020), Champion of Carrom
+                  (October, 2021), Two times Champion of Mollapara Badminton Tournament (2020), Champion of Carrom
                   Tournament M.M. College (2017), Runners-Up of JSMSC Chess Tournament (2015).
                 </p>
               </div>
@@ -917,10 +942,10 @@ export default function Home() {
               <div className="border rounded-lg p-6 hover:shadow-md transition-shadow">
                 <h3 className="text-xl font-semibold">Event Organization and Leadership</h3>
                 <p className="text-muted-foreground mt-2">
-                  Organized a Picnic of CSE Department consisting of 700 people (April 2022), Coordinator of "Bappi
-                  Premier League" a football tournament of AUST (May 2022), Organized a Batch Tour of 56 people in Saint
-                  Martin Coral Island, Bangladesh (2022), Organized a Batch Tour of 22 people in Keokradong Mountain
-                  Peak, Bandarban, Bangladesh (2021), Food and Accessories management in "Computer Science and
+                  Organized a Picnic of CSE Department consisting of 700 people (April, 2022), Coordinator of "Bappi
+                  Premier League" a football tournament of AUST (May, 2022), Organized a Batch Tour of 56 people in
+                  Saint Martin Coral Island, Bangladesh (2022), Organized a Batch Tour of 22 people in Keokradong
+                  Mountain Peak, Bandarban, Bangladesh (2021), Food and Accessories management in "Computer Science and
                   Engineering Fall Fest 2021".
                 </p>
               </div>
